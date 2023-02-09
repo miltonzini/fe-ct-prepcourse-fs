@@ -80,6 +80,8 @@ function esVocal(letra) {
       return "Dato incorrecto";
    }
 
+   // Está hardcodeado para usar los contenidos disponibles hasta ahora en el curso, lo correcto sería usar un array para las vocales.
+
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
