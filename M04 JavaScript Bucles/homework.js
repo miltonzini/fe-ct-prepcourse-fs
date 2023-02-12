@@ -133,18 +133,15 @@ function fizzBuzz(num) {
    // Si "num" es divisible entre 3 y 5 (ambos), retorna "fizzbuzz".
    // De lo contrario, retorna false.
    // Tu código:
-   // TO DO: continue
-   if (num % 3 === 0) {
+   if (num % 3 === 0 && num % 5 === 0 ) {
+      return "fizzbuzz";
+   } else if (num % 3 === 0) {
       return "fizz";
    } else if (num % 5 === 0) {
       return "buzz";
-   } else if (num % 3 === 0 && num % 5 === 0) {
-      return "fizzbuzz";
    } else {
       return false;
    }
-
-
 }
 
 function operadoresLogicos(num1, num2, num3) {
@@ -155,6 +152,18 @@ function operadoresLogicos(num1, num2, num3) {
    // Si todos los argumentos son cero, retornar ---> "Error".
    // Si no se cumple ninguna de las condiciones anteriores, retornar false.
    // Tu código:
+   if (num1 === 0 && num2 === 0 && num3 === 0) {
+      return "Error";
+   } else if (num1 < 0 || num2 < 0 || num3 < 0) {
+      return "Hay negativos";
+   } else if (num1 > num2 && num1 > num3 && num1 > 0) {
+      return "Numero 1 es mayor y positivo";
+   } else if (num3 > num1 && num3 > num2) {
+      num3++;
+      return num3;
+   } else {
+      return false;
+   }
 }
 
 function esPrimo(num) {
@@ -164,6 +173,15 @@ function esPrimo(num) {
    // [Pista 2]: puedes resolverlo utilizando un `bucle for`.
    // [Nota]: los números negativos, 0 y 1 NO son números primos.
    // Tu código:
+   if (num > 1) {
+      for (var i = 2; i < num; i++) {
+         // continuar
+      }
+   } else {
+      return false; // solo los números mayores a 1 pueden ser primos
+   }
+   
+   
 }
 
 function esVerdadero(valor) {
