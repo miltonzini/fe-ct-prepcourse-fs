@@ -190,19 +190,38 @@ function esVerdadero(valor) {
    // Si "valor" es verdadero retornar "Soy verdadero".
    // Caso contrario, retornar "Soy falso".
    // Tu código:
+   if (valor === true) {
+      return "Soy verdadero";
+   } else {
+      return "Soy falso";
+   }
 }
 
 function tieneTresDigitos(num) {
    // Si el número recibido tiene tres dígitos retornar true.
    // Caso contrario, retornar false.
    // Tu código:
+   var str = num.toString();
+   if (str.length === 3) {
+      return true;
+   } else {
+      return false;
+   }
 }
+tieneTresDigitos(111);
 
 function doWhile(num) {
    // Implementar una función que aumente el valor recibido en 5 hasta un límite de 8 veces.
    // Retornar el valor final.
    // Utilizar el bucle Do-While.
    // Tu código:
+   var i = 0;
+   do {
+      i++;
+      num += 5;
+      //
+   } while (i < 8);
+   return num;
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
