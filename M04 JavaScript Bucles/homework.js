@@ -174,9 +174,11 @@ function esPrimo(num) {
    // [Nota]: los números negativos, 0 y 1 NO son números primos.
    // Tu código:
    if (num > 1) {
-      for (var i = 2; i < num; i++) {
-         // continuar
+      if (num === 2 ) return true;
+      for (var i = 2; i < num - 1 ; i++) {
+         if (num % i === 0 ) return false;
       }
+      return true;
    } else {
       return false; // solo los números mayores a 1 pueden ser primos
    }
