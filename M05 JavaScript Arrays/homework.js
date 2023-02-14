@@ -185,6 +185,14 @@ function todosIguales(array) {
    // Si todos los elementos del arreglo son iguales, retornar true.
    // Caso contrario retornar false.
    // Tu código:
+   var primerElemento = array[0];
+   var validation = true;
+   for (var i = 0; i < array.length; i++) {
+      if (array[i] != primerElemento) {
+         validation = false;
+      }
+   } 
+   return validation;
 }
 
 function mesesDelAño(array) {
