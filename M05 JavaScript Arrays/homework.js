@@ -201,23 +201,15 @@ function mesesDelAño(array) {
    // Si alguno de los meses no está, retornar el string: "No se encontraron los meses pedidos".
    // Tu código:
    //
+   var newArray = [];
    if (array.includes("Enero") && array.includes("Marzo") && array.includes("Noviembre")) {
-      var newArray = array.map(function (mes) {
-         if (mes === "Enero" || mes === "Marzo" || mes === "Noviembre") {
-            console.log(mes + " está en la lista")
-            return mes;
-         } else {
-            console.log(mes + " no está en la lista");
+      for (let i = 0; i < array.length; i++) {
+         if (array[i] === "Enero" || array[i] === "Marzo" || array[i] === "Noviembre") {
+            newArray.push(array[i]);
          };
-      });
-
-      console.log(newArray);
-
-      // TO DO: quitar los 'undefined' de newArray antes de retornar.
+      };
       return newArray;
-
    } else {
-      console.log("No se encontraron los meses pedidos");
       return "No se encontraron los meses pedidos";
    };
 }
