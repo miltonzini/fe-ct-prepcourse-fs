@@ -274,6 +274,16 @@ function continueStatement(num) {
    // se continua con la siguiente iteración.
    // [PISTA]: utiliza el statement 'continue'.
    // Tu código:
+
+   var array = [];
+
+   for (var i = 0; i < 10; i++) {
+      if (i === 5) {
+         continue;
+      }
+      array.push(num += 2);
+   };
+   return array;
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
