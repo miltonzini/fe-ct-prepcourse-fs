@@ -111,6 +111,8 @@ function agregarAmigo(objetoUsuario, nuevoAmigo) {
    // Debes agregar el "nuevoAmigo" al final de este arreglo.
    // Retornar el objeto.
    // Tu código:
+   objetoUsuario['amigos'].push(nuevoAmigo);
+   return objetoUsuario;
 }
 
 function pasarUsuarioAPremium(objetoMuchosUsuarios) {
@@ -119,6 +121,11 @@ function pasarUsuarioAPremium(objetoMuchosUsuarios) {
    // Define esta propiedad de todos los usuarios como true.
    // Retornar el arreglo.
    // Tu código:
+   objetoMuchosUsuarios.forEach(usuario => {
+      usuario.esPremium = true;
+   });
+   return objetoMuchosUsuarios;
+
 }
 
 function sumarLikesDeUsuario(objetoUsuario) {
