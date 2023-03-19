@@ -45,7 +45,13 @@ function capToFront(string) {
    // Debes enviar todas las letras en mayúscula al comienzo del string.
    // Retornar el string.
    // [EJEMPLO]: soyHENRY ---> HENRYsoy
-   // Tu código:
+   // Tu código
+   var array = string.split('');
+   var mayusculas = array.filter(letra => (letra.toUpperCase() === letra));
+   var minusculas = array.filter(letra => (letra.toUpperCase() !== letra));
+   
+   var nuevoArray = mayusculas.join('') + minusculas.join('');
+   return nuevoArray;
 }
 
 function asAmirror(frase) {
