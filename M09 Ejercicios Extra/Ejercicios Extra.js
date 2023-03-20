@@ -59,6 +59,19 @@ function asAmirror(frase) {
    // La diferencia es que cada palabra estará escrita al inverso.
    // [EJEMPLO]: "The Henry Challenge is close!"  ---> "ehT yrneH egnellahC si !esolc"
    // Tu código:
+   var arrayPalabras = frase.split(' ');
+   var nuevoArray = [];
+   for (let i = 0; i < arrayPalabras.length; i++) {
+      var palabra = arrayPalabras[i].split('');
+      var arrayCaracteresInvertidos = [];
+      for (let j = palabra.length - 1; j >= 0; j--) {
+         arrayCaracteresInvertidos.push(palabra[j]);
+      }
+      var palabraInvertida = arrayCaracteresInvertidos.join('');
+      nuevoArray.push(palabraInvertida);
+   }
+   var stringFinal = nuevoArray.join(' ');
+   return stringFinal;
 }
 
 function capicua(numero) {
