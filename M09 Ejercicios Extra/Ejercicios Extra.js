@@ -88,12 +88,10 @@ function capicua(numero) {
    var resultado;
    
    if (numero == numeroInvertido) {
-      resultado = "Es capicua";
+      return "Es capicua";
    } else {
-      resultado = "No es capicua";
+      return "No es capicua";
    }
-   console.log(resultado);
-   return resultado;
 }
 
 function deleteAbc(string) {
