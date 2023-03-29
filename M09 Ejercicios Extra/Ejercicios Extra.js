@@ -8,12 +8,12 @@ function deObjetoAarray(objeto) {
    // Tu código:
 
    var claves = Object.keys(objeto); 
-    var arreglodeArreglos = [];
-    for (let i = 0; i < claves.length; i++) {
-        var array = [claves[i], objeto[claves[i]]];
-        arreglodeArreglos.push(array);
-    }
-    return arreglodeArreglos;
+   var arreglodeArreglos = [];
+   for (let i = 0; i < claves.length; i++) {
+       var array = [claves[i], objeto[claves[i]]];
+       arreglodeArreglos.push(array);
+   }
+   return arreglodeArreglos;
    
 }
 
@@ -78,6 +78,22 @@ function capicua(numero) {
    // Si el número que recibes es capicúa debes retornar el string: "Es capicua".
    // Caso contrario: "No es capicua".
    // Tu código:
+   var arrayNumero = numero.toString().split('');
+   var arrayInverso = [];
+
+   for (var i = arrayNumero.length - 1; i >= 0; i--) {
+      arrayInverso.push(arrayNumero[i]);
+   }
+   var numeroInvertido = arrayInverso.join('');
+   var resultado;
+   
+   if (numero == numeroInvertido) {
+      resultado = "Es capicua";
+   } else {
+      resultado = "No es capicua";
+   }
+   console.log(resultado);
+   return resultado;
 }
 
 function deleteAbc(string) {
